@@ -1,4 +1,6 @@
 SCRIPTS=	enlightenment \
+		freebsd_ports \
+		freebsdext_ports \
 		gecko \
 		github \
 		haskell \

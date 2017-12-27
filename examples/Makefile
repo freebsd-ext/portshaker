@@ -5,7 +5,12 @@ FILESDIR_portshaker.conf=	${ETCDIR}
 
 SUBDIR=		portshaker.d
 
+.if defined (WITH_FREEBSDEXT)
+main_merge_from=	freebsd_ports
+main_merge_from+=	freebsdext_ports
+.else
 main_merge_from=	ports
+.endif
 .if defined (WITH_BSDSHARP)
 main_merge_from+=	github:smortex:bsd-sharp
 .endif
@@ -48,7 +53,8 @@ all beforeinstall:
 	@echo " \`-----------------------------------------------------------------'"
 	@false
 .endif
-.if ! defined (WITH_BSDSHARP) && \
+.if ! defined (WITH_FREEBSDEXT) && \
+    ! defined (WITH_BSDSHARP) && \
     ! defined (WITH_ENLIGHTENMENT) && \
     ! defined (WITH_GECKO) && \
     ! defined (WITH_HASKELL) && \
@@ -58,6 +64,7 @@ all beforeinstall:
 	@echo " ,----------------------------( Error )----------------------------."
 	@echo " | You have to define at least one of the following to generate a  |"
 	@echo " | sample portshaker.conf that fits your needs:                    |"
+	@echo " |   - WITH_FREEBDSEXT	 -- Merge FreeBSD Ext developement ports;
 	@echo " |   - WITH_BSDSHARP      -- Merge BSD# team's developement ports; |"
 	@echo " |   - WITH_ENLIGHTENMENT -- Merge E17 work in progress ports;     |"
 	@echo " |   - WITH_GECKO         -- Merge Gecko's ports;                  |"
