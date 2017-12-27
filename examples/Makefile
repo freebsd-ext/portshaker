@@ -48,7 +48,7 @@ all beforeinstall:
 	@echo " ,----------------------------( Error )----------------------------."
 	@printf " | The %-59s |\n" "'${ETCDIR}/portshaker.d' directory does not exist."
 	@echo " |                                                                 |"
-	@echo " | Ensure that portshaker(8) is installed and \$$PREFIX is set       |"
+	@echo " | Ensure that portshaker(8) is installed and \$$PREFIX is set     |"
 	@echo " | properly, then try again.                                       |"
 	@echo " \`-----------------------------------------------------------------'"
 	@false
@@ -64,7 +64,7 @@ all beforeinstall:
 	@echo " ,----------------------------( Error )----------------------------."
 	@echo " | You have to define at least one of the following to generate a  |"
 	@echo " | sample portshaker.conf that fits your needs:                    |"
-	@echo " |   - WITH_FREEBDSEXT	 -- Merge FreeBSD Ext developement ports;
+	@echo " |   - WITH_FREEBDSEXT	 -- Merge FreeBSD Ext developement ports; |"
 	@echo " |   - WITH_BSDSHARP      -- Merge BSD# team's developement ports; |"
 	@echo " |   - WITH_ENLIGHTENMENT -- Merge E17 work in progress ports;     |"
 	@echo " |   - WITH_GECKO         -- Merge Gecko's ports;                  |"
