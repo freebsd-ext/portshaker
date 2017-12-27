@@ -9,6 +9,6 @@ fi
 shift
 
 method="svnlite"
-svn_checkout_path="svn://svn.freebsd.org/ports/head"
+svn_checkout_path="https://github.com/freebsd-ext/freebsd-ports/trunk/"
 
 run_portshaker_command $*
