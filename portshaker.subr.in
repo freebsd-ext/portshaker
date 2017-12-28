@@ -33,7 +33,7 @@ RSYNC=${RSYNC:=rsync}
 RSYNC_FLAGS=""
 SVN="${SVN:=svn}"
 #SVN_FLAGS=""
-SVNLITE="${SVNLITE:svnlite}"
+SVNLITE="${SVNLITE:=svnlite}"
 #SVNLITE_FLAGS=""
 SVNADMIN="${SVNADMIN:=svnadmin}"
 #SVNADMIN_FLAGS=""
