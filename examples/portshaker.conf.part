@@ -1,6 +1,9 @@
 # vim:set syntax=sh:
 # $Id$
 
+#---[use zfs by default]---
+use_zfs=1
+
 #---[ Base directory for mirrored Ports Trees ]---
 mirror_base_dir="/var/cache/portshaker"
 
